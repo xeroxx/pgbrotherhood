@@ -26,55 +26,61 @@
     </style>
 </head>
 <body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-        <img src="PGB.png" alt="PG Brotherhood logo" class="logo"/>
-        <h1 class="text-2xl font-bold text-gray-800">PG Brotherhood</h1>
-        <ul class="flex space-x-6">
+    <!-- Navbar English -->
+    <nav id="english-nav" class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="sandbox:/mnt/data/PGB.png" alt="PG Brotherhood logo" class="logo"/>
+            <h1 class="text-2xl font-bold text-gray-800">PG Brotherhood Foundation</h1>
+        </div>
+        <ul class="hidden md:flex space-x-6">
             <li><a href="#mission" class="text-gray-600 hover:text-gray-900">Mission</a></li>
             <li><a href="#initiatives" class="text-gray-600 hover:text-gray-900">Initiatives</a></li>
             <li><a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a></li>
         </ul>
+        <button id="toggle-btn" class="brand-bg text-white py-2 px-4 rounded-lg">فارسی / English</button>
     </nav>
     
-    <!-- Hero Section -->
-    <section class="bg-blue-600 text-white text-center py-24 px-6">
-        <h2 class="text-4xl font-bold">Empowering Men<br>Building Community</h2>
-        <p class="mt-4 text-lg">Supporting men's mental health and personal growth for the Iranian diaspora</p>
-        <a href="#contact" class="mt-6 inline-block bg-white text-blue-600 font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-100">Get Involved</a>
-    </section>
-    
-    <!-- Mission Section -->
-    <section id="mission" class="py-16 px-6 text-center">
-        <h2 class="text-3xl font-bold text-gray-800">Our Mission</h2>
-        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">PG Brotherhood Foundation is dedicated to fostering a supportive environment for Iranian men, promoting mental well-being, connection, and resilience.</p>
-    </section>
-    
-    <!-- Initiatives Section -->
-    <section id="initiatives" class="bg-gray-200 py-16 px-6 text-center">
-        <h2 class="text-3xl font-bold text-gray-800">Our Initiatives</h2>
-        <div class="mt-8 flex flex-wrap justify-center gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg w-80">
-                <h3 class="text-xl font-semibold">Men’s Circles</h3>
-                <p class="mt-2 text-gray-600">A safe space for men to connect, share, and grow.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg w-80">
-                <h3 class="text-xl font-semibold">Workshops & Coaching</h3>
-                <p class="mt-2 text-gray-600">Programs to enhance mental resilience and personal development.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg w-80">
-                <h3 class="text-xl font-semibold">Community Support</h3>
-                <p class="mt-2 text-gray-600">Resources and mentorship to navigate life’s challenges.</p>
-            </div>
+    <!-- Navbar Farsi -->
+    <nav id="farsi-nav" class="bg-white shadow-md py-4 px-6 hidden md:flex justify-between items-center farsi-text" style="display: none; direction: rtl;">
+        <div class="flex items-center gap-3" style="direction: rtl;">
+            <img src="sandbox:/mnt/data/PGB.png" alt="لوگوی برادری خلیج فارس" class="logo"/>
+            <h1 class="text-2xl font-bold text-gray-800">برادری خلیج فارس</h1>
         </div>
-    </section>
+        <ul class="flex space-x-6" style="direction: ltr;">
+            <li><a href="#mission" class="text-gray-600 hover:text-gray-900">ماموریت</a></li>
+            <li><a href="#initiatives" class="text-gray-600 hover:text-gray-900">ابتکارات</a></li>
+            <li><a href="#contact" class="text-gray-600 hover:text-gray-900">تماس</a></li>
+        </ul>
+        <button id="toggle-btn-farsi" class="brand-bg text-white py-2 px-4 rounded-lg">فارسی / English</button>
+    </nav>
     
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6 text-center">
-        <h2 class="text-3xl font-bold text-gray-800">Wanna give back to the community?</h2>
-        <p class="mt-4 text-gray-600">Join us in making a difference. Reach out today!</p>
-        <a href="mailto:info@pgbrotherhood.org" class="mt-6 inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-blue-700">Contact Us</a>
-    </section>
+    <!-- English Version -->
+    <div id="english">
+        <section class="brand-bg text-white text-center py-24 px-6">
+            <h2 class="text-4xl font-bold">Empowering Men,<br>Building Community</h2>
+            <p class="mt-4 text-lg">Supporting mental health and personal growth for the Iranian diaspora.</p>
+            <a href="#contact" class="mt-6 inline-block bg-white brand-text font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-100">Get Involved</a>
+        </section>
+        
+        <section id="mission" class="py-16 px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800">Our Mission</h2>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">PG Brotherhood Foundation is dedicated to fostering a supportive environment for Iranian men, promoting mental well-being, connection, and resilience.</p>
+        </section>
+    </div>
+    
+    <!-- Farsi Version -->
+    <div id="farsi" style="display: none; direction: rtl; text-align: right;" class="farsi-text">
+        <section class="brand-bg text-white text-center py-24 px-6">
+            <h2 class="text-4xl font-bold">توانمندسازی مردان،<br>ایجاد جامعه</h2>
+            <p class="mt-4 text-lg">حمایت از سلامت روان و رشد شخصی ایرانیان مهاجر.</p>
+            <a href="#contact" class="mt-6 inline-block bg-white brand-text font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-100">شرکت کنید</a>
+        </section>
+        
+        <section id="mission" class="py-16 px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800">ماموریت ما</h2>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">بنیاد PG Brotherhood متعهد به ایجاد محیطی حمایتی برای مردان ایرانی، ارتقای سلامت روان، ارتباطات و انعطاف‌پذیری است.</p>
+        </section>
+    </div>
     
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6">
@@ -83,6 +89,33 @@
             <a href="https://www.instagram.com/pg.brotherhood" target="_blank" class="text-gray-400 hover:text-white">Follow us on Instagram @pg.brotherhood</a>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.getElementById("toggle-btn");
+            const toggleBtnFarsi = document.getElementById("toggle-btn-farsi");
+            const englishContent = document.getElementById("english");
+            const farsiContent = document.getElementById("farsi");
+            const englishNav = document.getElementById("english-nav");
+            const farsiNav = document.getElementById("farsi-nav");
+            
+            function toggleLanguage() {
+                if (englishContent.style.display === "none") {
+                    englishContent.style.display = "block";
+                    farsiContent.style.display = "none";
+                    englishNav.style.display = "flex";
+                    farsiNav.style.display = "none";
+                } else {
+                    englishContent.style.display = "none";
+                    farsiContent.style.display = "block";
+                    englishNav.style.display = "none";
+                    farsiNav.style.display = "flex";
+                }
+            }
+            
+            toggleBtn.addEventListener("click", toggleLanguage);
+            toggleBtnFarsi.addEventListener("click", toggleLanguage);
+        });
+    </script>
 </body>
 </html>
-
