@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PG Brotherhood Foundation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dorna:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Brand color pulled from logo (teal) */
+        :root { --brand: #14B8A6; /* tweak if you have an exact hex */ }
+        .brand-bg { background-color: var(--brand); }
+        .brand-text { color: var(--brand); }
+        .brand-border { border-color: var(--brand); }
+        .brand-bg:hover { filter: brightness(0.92); }
+
+        @font-face {
+            font-family: 'Dorna-Bold';
+            src: url('path-to-your-dorna-bold-font.woff2') format('woff2'),
+                 url('path-to-your-dorna-bold-font.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+        .farsi-text { font-family: 'Dorna-Bold', sans-serif; }
+        .logo { height: 44px; width: auto; }
+    </style>
 </head>
 <body class="bg-gray-100">
     <!-- Navbar -->
     <nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <img src="PGB.png" alt="PG Brotherhood logo" class="logo"/>
         <h1 class="text-2xl font-bold text-gray-800">PG Brotherhood</h1>
         <ul class="flex space-x-6">
             <li><a href="#mission" class="text-gray-600 hover:text-gray-900">Mission</a></li>
@@ -65,3 +85,4 @@
     </footer>
 </body>
 </html>
+
